@@ -64,7 +64,7 @@ xsi:schemaLocation="http://nouveau.freedesktop.org/ rules-ng.xsd">
 	<value value="0x12" name="RGBA_FP32" />
 </enum>
 
-<enum name="TGR3D_DEPTH_FUNC">
+<enum name="TGR3D_COMPARE_FUNC">
 	<value value="0x0"  name="NEVER" />
 	<value value="0x1"  name="LESS" />
 	<value value="0x2"  name="EQUAL" />
@@ -91,17 +91,6 @@ xsi:schemaLocation="http://nouveau.freedesktop.org/ rules-ng.xsd">
 	<value value="5" name="INVERT" />
 	<value value="6" name="INCR_WRAP" />
 	<value value="7" name="DECR_WRAP" />
-</enum>
-
-<enum name="TGR3D_STENCIL_FUNC">
-	<value value="0" name="NEVER" />
-	<value value="1" name="LESS" />
-	<value value="2" name="EQUAL" />
-	<value value="3" name="LESS_EQUAL" />
-	<value value="4" name="GREATER" />
-	<value value="5" name="NOTEQUAL" />
-	<value value="6" name="GREATER_EQUAL" />
-	<value value="7" name="ALWAYS" />
 </enum>
 
 <domain name="TGR3D" width="32">
@@ -229,12 +218,12 @@ xsi:schemaLocation="http://nouveau.freedesktop.org/ rules-ng.xsd">
 
 	<reg32 offset="0x400" name="STENCIL_FRONT1">
 		<bitfield name="MASK" low="0" high="7" type="hex" />
-		<bitfield name="FUNC" low="8" high="10" type="TGR3D_STENCIL_FUNC" />
+		<bitfield name="FUNC" low="8" high="10" type="TGR3D_COMPARE_FUNC" />
 	</reg32>
 
 	<reg32 offset="0x401" name="STENCIL_BACK1">
 		<bitfield name="MASK" low="0" high="7" type="hex" />
-		<bitfield name="FUNC" low="8" high="10" type="TGR3D_STENCIL_FUNC" />
+		<bitfield name="FUNC" low="8" high="10" type="TGR3D_COMPARE_FUNC" />
 	</reg32>
 
 	<reg32 offset="0x402" name="STENCIL_PARAMS">
@@ -244,7 +233,7 @@ xsi:schemaLocation="http://nouveau.freedesktop.org/ rules-ng.xsd">
 
 	<reg32 offset="0x403" name="DEPTH_TEST_PARAMS">
 		<bitfield name="DEPTH_WRITE" pos="8" type="boolean" />
-		<bitfield name="FUNC" high="7" low="4" type="TGR3D_DEPTH_FUNC" />
+		<bitfield name="FUNC" high="7" low="4" type="TGR3D_COMPARE_FUNC" />
 		<bitfield name="DEPTH_TEST" pos="3" type="boolean" />
 	</reg32>
 
