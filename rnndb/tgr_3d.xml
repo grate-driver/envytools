@@ -62,6 +62,10 @@ xsi:schemaLocation="http://nouveau.freedesktop.org/ rules-ng.xsd">
 	<value value="0xc"  name="D16_NONLINEAR" />
 	<value value="0xd"  name="RGBA8888" />
 	<value value="0x12" name="RGBA_FP32" />
+	<value value="0x16" name="DXT1" />
+	<value value="0x18" name="DXT3" />
+	<value value="0x19" name="DXT5" />
+	<value value="0x1a" name="ETC1" />
 </enum>
 
 <enum name="TGR3D_COMPARE_FUNC">
@@ -272,6 +276,7 @@ xsi:schemaLocation="http://nouveau.freedesktop.org/ rules-ng.xsd">
 		<bitfield name="MINFILTER_LINEAR_WITHIN" pos="28" type="boolean" />
 		<bitfield name="MINFILTER_LINEAR_BETWEEN" pos="27" type="boolean" />
 		<bitfield name="FORMAT" high="12" low="8" type="TGR3D_PIXEL_FORMAT" />
+		<bitfield name="COMPRESSED" pos="4" type="boolean" />
 		<bitfield name="WRAP_S_MIRRORED_REPEAT" pos="3" type="boolean" />
 		<bitfield name="WRAP_T_MIRRORED_REPEAT" pos="2" type="boolean" />
 		<bitfield name="WRAP_S_CLAMP_TO_EDGE" pos="1" type="boolean" />
