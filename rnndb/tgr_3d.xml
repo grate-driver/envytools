@@ -61,6 +61,7 @@ xsi:schemaLocation="http://nouveau.freedesktop.org/ rules-ng.xsd">
 	<value value="0xb"  name="D16_LINEAR" />
 	<value value="0xc"  name="D16_NONLINEAR" />
 	<value value="0xd"  name="RGBA8888" />
+	<value value="0xe"  name="BGRA8888" />
 	<value value="0x12" name="RGBA_FP32" />
 	<value value="0x16" name="DXT1" />
 	<value value="0x18" name="DXT3" />
