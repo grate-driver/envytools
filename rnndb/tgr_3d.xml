@@ -167,8 +167,8 @@ xsi:schemaLocation="http://nouveau.freedesktop.org/ rules-ng.xsd">
 		<bitfield name="PROVOKING_VERTEX" pos="27" type="TGR3D_PROVOKING_VERTEX" />
 		<bitfield name="PRIMITIVE_TYPE" low="24" high="26" type="TGR3D_PRIMITIVE_TYPE" />
 		<bitfield name="FIRST" low="0" high="23" type="uint" />
-		<bitfield name="UNK30" pos="30" type="boolean" />
-		<bitfield name="VTX_CACHE_INVALIDATE" pos="31" type="boolean" />
+		<bitfield name="VTX_MEM_CACHE_INVALIDATE" pos="30" type="boolean" />
+		<bitfield name="VTX_GPU_CACHE_INVALIDATE" pos="31" type="boolean" />
 	</reg32>
 	<reg32 offset="0x123" name="DRAW_PRIMITIVES">
 		<bitfield name="INDEX_COUNT" low="20" high="31" type="uint" />
